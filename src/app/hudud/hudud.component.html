@@ -1,0 +1,41 @@
+<app-content></app-content>
+<h1 class="text-center p-2 mb-2">{{ region_name.hudud }}</h1>
+
+<div class="container">
+    <table class="table table-bordered table-hover table-borderless shadow mb-2 bg-body rounded">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">Kun</th>
+                <th scope="col">Sana</th>
+                <th scope="col">Hafta Kuni</th>
+                <th scope="col">Vaqtlar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let h of data; let i = index">
+                <td scope="row" class="text-center">
+                    <span style="font-weight: bold">{{ i + 1 }}</span>
+                </td>
+
+                <td class="text-center">
+                    {{ h.kun }}
+                </td>
+
+                <td class="text-center">
+                    <span class="text-primary">
+                        {{ h.hafta_kuni }}
+                    </span>
+
+                </td>
+
+                <td class="text-center">
+                    <b>Saharlik:</b> <span style="font-weight: bold;" class="text-success"> {{ h.vaqtlar.saharlik
+                        }}</span> <br>
+                    <b>Iftorlik:</b> <span style="font-weight: bold;" class="text-primary"> {{ h.vaqtlar.iftorlik
+                        }}</span>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

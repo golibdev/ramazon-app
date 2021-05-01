@@ -1,0 +1,44 @@
+<div class="container">
+    <h3 class="text-center mb-2 p-2"> Bugun {{ today | date }} </h3>
+    <div data-aos="zoom-in" data-aos-duration="1500" class="container text-center shadow-lg p-3 mb-5 bg-body rounded">
+        <img src="assets/images/ramadan.jpg" alt="" width="30%" />
+        <h4>Ramazon oyi muborak!</h4>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div data-aos="zoom-in" data-aos-duration="1500" class="col-md">
+            <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+                <div class="text-center">
+                    <img src="assets/images/uzbekistan.jpg" width="55%" alt="uzbekistan" class="img-fluid" />
+                </div>
+    
+                <p>
+                    Barcha hududlar ro'yxatidan o'z hududingizni kiritib bir oylik ma'lumotlarni oling.
+                </p>
+                <a routerLink="hududlar/" class="btn btn-success">Barcha Hududlar</a>
+            </div>
+        </div>
+    
+        <div data-aos="zoom-in" data-aos-duration="1500" class="col-md">
+            <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+                <div class="text-center">
+                    <img src="assets/images/illustration.jpeg" width="55%" alt="illustration" class="img-fluid" />
+                </div>
+                <p>
+                    Barcha hududlarga tegishli bo'lgan, bugungi kunga oid ma'lumotlarga ega bo'ling.
+                </p>
+                <a routerLink="today/" class="btn btn-primary">Bugungi Kun</a>
+            </div>
+        </div>
+    </div>
+
+    <app-content></app-content>
+
+    <div data-aos="zoom-in" data-aos-duration="1500">
+        <div class="text-center p-2 mb-3">
+            <a routerLink="about/" class="btn btn-outline-primary">Loyiha Haqida</a>
+        </div>
+    </div>
+</div>

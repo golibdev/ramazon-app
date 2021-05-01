@@ -1,0 +1,24 @@
+<app-content></app-content>
+
+<div class="container">
+    <h1 class="text-center p-2 mb-2">
+        Bugun:
+        {{ region_name.hudud }}
+    </h1>
+    <table class="table table-borderless shadow mb-2 bg-body rounded">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">Sana</th>
+                <th scope="col">Hafta kuni</th>
+                <th scope="col">Saharlik</th>
+                <th scope="col">Iftorlik</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td style="font-size: 15px;font-weight:bold;" class="text-center">{{ today | date:'d-MMM':'UTC+5' }}</td>
+            <td style="font-size: 15px;" class="text-center">{{ data.hafta_kuni }}</td>
+            <td style="font-size: 15px;" class="text-center text-primary">{{ data.vaqtlar.saharlik }}</td>
+            <td style="font-size: 15px;" class="text-center text-success">{{ data.vaqtlar.iftorlik }}</td>
+        </tbody>
+    </table>
+</div>

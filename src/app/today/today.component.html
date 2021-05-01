@@ -1,0 +1,41 @@
+<h4 class="text-center">
+    Bugun: {{ today | date:'mediumDate':'UTC+5' }}
+</h4> 
+<h1 class="text-center">Shaharlar</h1>
+
+<div class="input-group mb-3">
+    <input [(ngModel)]="keyword" (ngModelChange)="onRegionFilter()" type="text" class="form-control"
+        placeholder="Hududingizni kiriting">
+</div>
+
+<div class="container">
+    <div class="row">
+        <table class="table table-borderless table-hover shadow mb-2 bg-body rounded">
+            <thead>
+                <tr class="text-center">
+                    <th scope="col">T/R</th>
+                    <th scope="col">Shahar</th>
+                    <th scope="col">Taqvim</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let h of hududlar; let i = index">
+                    <td scope="row" class="text-center">
+                        <span style="font-weight: bold">{{ i + 1 }}</span>
+                    </td>
+                    <td class="text-center">
+                        
+                        <span class="text-success" style="font-weight: bold;">
+                            {{ h.hudud }}
+                        </span>
+
+                    </td>
+                    <td class="text-center">
+                        <a routerLink="/today/{{ h.hudud_id }}" class="btn btn-warning">Ko'rish</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
